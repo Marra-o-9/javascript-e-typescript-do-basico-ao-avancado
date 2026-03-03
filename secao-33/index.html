@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meu HTML</title>
+  <!-- CSS: -->
+  <style>
+    h1 {
+      background: red;
+    }
+
+    /* o navegador sempre vai selecionar a última leitura em caso de duplicidade: */
+    h1 {
+      background: blueviolet;
+    }
+
+    #cabecalho-dois {
+      background: silver;
+    }
+  </style>
+</head>
+<body>
+  <!-- atributo "id" não se repete -->
+  <!-- classe se repete e dá pra se adicionar mais de uma -->
+  <h1 id="cabecalho-um" class="fundo-vermelho borda-esquerda">
+
+  </h1>
+  <h1 id="cabecalho-dois" class="fundo-vermelho">
+
+  </h1>
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+    Architecto est eum suscipit iusto molestias hic porro ducimus
+    ullam dolor at exercitationem alias blanditiis earum
+    obcaecati aut, itaque amet? Architecto, unde.
+  </p>
+</body>
+</html>
