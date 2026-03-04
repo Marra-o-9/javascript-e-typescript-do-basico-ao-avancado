@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
+  <!-- o meta abaixo serve para configurar a visualização em dispositivos móveis -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Meu HTML</title>
   <!-- CSS: -->
@@ -15,22 +16,34 @@
       background: blueviolet;
     }
 
+    /* altera por id (geralmente não recomendado)
     #cabecalho-dois {
       background: silver;
+    } */
+    /* priorizar modificar classes*/
+
+    /* id tem prioridade à classe*/
+    .fundo-vermelho {
+      background: blue;
     }
+
+    .bold {
+      color: yellow;
+    }
+
   </style>
 </head>
 <body>
   <!-- atributo "id" não se repete -->
   <!-- classe se repete e dá pra se adicionar mais de uma -->
   <h1 id="cabecalho-um" class="fundo-vermelho borda-esquerda">
-
+    Meu título
   </h1>
   <h1 id="cabecalho-dois" class="fundo-vermelho">
-
+    Meu título 2
   </h1>
   <p>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+    Lorem <b class="bold">ipsum</b>dolor sit amet consectetur adipisicing elit.
     Architecto est eum suscipit iusto molestias hic porro ducimus
     ullam dolor at exercitationem alias blanditiis earum
     obcaecati aut, itaque amet? Architecto, unde.
