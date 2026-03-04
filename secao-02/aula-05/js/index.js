@@ -1,0 +1,1 @@
+console.log("Este texto está em index.js")
