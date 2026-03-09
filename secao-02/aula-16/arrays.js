@@ -33,3 +33,23 @@ console.log(nomes);
 removido = nomes.shift();
 console.log(removido);
 console.log(nomes);
+
+// Retorna undefined caso o índice não exista
+console.log(nomes[50]);
+
+// "Fatiar" array
+console.log(nomes.slice(0, 2)); // até o segundo item (pega 0 e 1)
+
+// Array é considerado um objeto
+console.log(typeof nomes);
+
+// Conferir se é array:
+console.log(nomes instanceof Array);
+
+/* Qualquer tipo de dado pode ser colocado em arrays:
+- String
+- Number
+- Object
+- Function
+etc...
+*/
