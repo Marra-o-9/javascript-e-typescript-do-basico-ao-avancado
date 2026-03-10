@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Box Model</title>
+  <style>
+    /* definir preset
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    */
+    
+    /* ocupa a largura inteira por default */
+    .section-one {
+      width: 200px;
+      height: 160px;
+      background: lightgray;
+      /* borda sólida, cor preta */
+      border: 5px solid black;
+      padding: 15px;
+      /* cor do texto */
+      color: aliceblue;
+      margin: 20px;
+    }
+
+    .section-two {
+      width: 50px;
+      height: 40px;
+      background: burlywood;
+      /* as margens não se somam */
+      /* a maior delas será usada */
+      margin: 30px;
+      /* tenta encontrar as bordas */
+      border-style: solid;
+      border-width: 20px;
+      border-bottom-color: firebrick;
+      border-bottom-width: 10px;
+      /* ordem top right bottom left */
+      padding: 15px 0 0 0;
+    }
+
+    /* alterar duas classes ao mesmo tempo:
+    .section-one,
+    .section-two {
+      box-sizing: border-box;
+    }
+    */
+  </style>
+</head>
+<body>
+  <!-- tem que colocar heading em section para evitar warning -->
+  <section class="section-one">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit nihil molestias neque tenetur exercitationem. Dignissimos nobis, fuga ea saepe similique, repellat repellendus, maiores sequi repudiandae nam quo voluptas hic beatae.</section>
+  <section class="section-two">2</section>
+</body>
+</html>
+
+<!-- content edge: conteúdo em si -->
+ <!-- padding edge: espaçamento entre o conteúdo e a borda -->
+  <!-- border edge: espaço limite do box -->
+   <!-- margin edge: espaço de fora -->

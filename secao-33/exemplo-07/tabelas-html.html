@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabelas HTML</title>
+  <style>
+    table {
+      /* deixar bordas justapostas */
+      border-collapse: collapse;
+      width: 90%;
+    }
+
+    table td,
+    table th {
+      border: 1px solid #ccc;
+      padding: 5px;
+    }
+
+    table caption {
+      caption-side: bottom;
+      text-align: left;
+      font-style: italic;
+      font-size: 14px;
+      margin-bottom: 5px;
+    }
+
+    thead, tfoot {
+      background: rgba(0, 0, 0, 0.2);
+    }
+
+    .responsive-table {
+      max-width: 100%;
+      /* barra de rolagem atrelada à tabela */
+      overflow-x: auto;
+    }
+  </style>
+</head>
+<body>
+  <p>Lorem ipsum dolor, sit.</p>
+  <div class="responsive-table">
+    <!-- Tabela -->
+    <table>
+      <caption>Um Título ou Descrição da Tabela</caption>
+      <!-- Cabeçalho da tabela -->
+      <thead>
+        <!-- Linhas -->
+        <tr>
+          <!-- Coluna -->
+          <!-- Campo de cabeçalhos -->
+          <th>Coluna 1</th>
+          <th>Coluna 2</th>
+          <th>Coluna 3</th>
+        </tr>
+      </thead>
+      <!-- Corpo da tabela -->
+      <tbody>
+        <tr>
+          <!-- Campo de valores -->
+          <td>Corpo 1</td>
+          <td>Corpo 2</td>
+          <td>Corpo 3</td>
+        </tr>
+        <tr>
+          <td>Corpo 4</td>
+          <!-- fazer valor ocupar duas colunas -->
+          <td colspan = "2">Corpo 5</td>
+          <!-- fazer valor ocupar duas colunas 
+          <td rowspan = "2">Corpo 5</td> -->
+        </tr>
+      </tbody>
+      <!-- Rodapé da tabela -->
+      <tfoot>
+        <tr>
+          <td>Rodapé 1</td>
+          <td>Rodapé 2</td>
+          <td>Rodapé 3</td>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+</body>
+</html>

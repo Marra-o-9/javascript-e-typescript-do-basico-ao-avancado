@@ -18,6 +18,15 @@ console.log(a, b);
 b.pop();            // também afetou a
 console.log(a, b);
 
-b = [...a]  // copia todos os valores de a
+b = [...a];  // copia todos os valores de a
 // se torna independente
 
+a = {
+  nome: "Henrique",
+  sobrenome: "Marra"
+};
+
+b = {...a}; // independente
+
+a.nome = "Henri";
+console.log(b);
