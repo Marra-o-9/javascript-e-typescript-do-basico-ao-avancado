@@ -13,37 +13,129 @@
    <!-- impossível aninhar formulários -->
   <section>
     <form action="#" method="get" target="_blank"> <!-- action: envia o formulário, method: get ou post, target: abrir em outra janela (somente pra verificar envio do formulário nesse caso) -->
-        <h1>Título</h1>
-        <fieldset>
-          <legend>Descrição</legend>
-          <p>
-            <label for="nome">Nome:</label>
-            <!-- definir tipo do input -->
-            <input type="text" id="nome" name="nome" placeholder="Seu nome"> <!-- colocar id e name para o backend, servem como seletores e indicadores -->
-            <!-- placeholder é o exemplo de texto dentro da caixa -->
-            <!-- value é um placeholder que tem o conteúdo de texto na caixa -->
-            <!-- readonly bloqueia a edição do texto -->
-            
-          </p>
-          <p>
-            <!-- rótulo do input -->
-             <!-- for: direciona para input específico à partir do id -->
-            <label for="idade">Idade:</label>
-            <input type="number" id="idade" name="idade" placeholder="Sua idade">
-          </p>
-          <p>
-            <label for="dev">É um Dev?</label>
-            <!-- caixa de marcação -->
-            <input type="checkbox" id="dev" name="dev">
-          </p>
-          <p>
-            <!-- botão reset para apagar conteúdo do formulário -->
-            <button type="reset">Reset</button>
-            <!-- botão submit para enviar -->
-            <button type="submit">Enviar</button>
-          </p>
-        </fieldset>
-      </form>
-    </section>
+      <h1>Título</h1>
+      <fieldset>
+        <!-- legend: descrição -->
+        <legend>Formulário</legend>
+        <p>
+          <label for="nome">Nome:</label>
+          <!-- definir tipo do input -->
+          <input type="text" id="nome" name="nome" placeholder="Seu nome"> <!-- colocar id e name para o backend, servem como seletores e indicadores -->
+          <!-- placeholder é o exemplo de texto dentro da caixa -->
+          <!-- value é um placeholder que tem o conteúdo de texto na caixa -->
+          <!-- readonly bloqueia a edição do texto -->
+        </p>
+        <p>
+          <!-- rótulo do input -->
+           <!-- for: direciona para input específico à partir do id -->
+          <label for="idade">Idade:</label>
+          <input type="number" id="idade" name="idade" placeholder="Sua idade">
+          <!-- min, max, step -->
+        </p>
+        <p>
+          <label for="dev">É um Dev?</label>
+          <!-- caixa de marcação -->
+          <input type="checkbox" id="dev" name="dev" value="sim" required>
+           <!-- value: definir o valor da checkbox -->
+            <!-- required: marcação obrigatória -->
+             <!-- checked: inicia marcado -->
+        </p>
+        <p>
+          <label for="masculino">Masculino</label>
+          <!-- caixa de seleção individual, somente se tiver o mesmo "name" -->
+          <input type="radio" id="masculino" name="genero"><br>
+          <label for="feminino">Feminino</label>
+          <input type="radio" id="feminino" name="genero"><br>
+          <label for="outro">Outro</label>
+          <input type="radio" id="outro" name="genero"><br>
+        </p>
+        <p>
+          <label for="data">Data de nascimento:</label>
+          <!-- data -->
+          <!-- ou time (horas) ou datetime (data+hora) -->
+          <input type="date" id="data" name="data">
+        </p>
+        <p>
+          <label for="email">Seu e-mail:</label>
+          <!-- e-mail: tipo para validação básica -->
+          <input type="email" id="email" name="email" placeholder="ex.: email@email.com">
+        </p>
+        <p>
+          <label for="url">Seu GitHub:</label>
+          <!-- url: tipo para endereços web -->
+          <input type="url" id="url" name="url" placeholder="URL">
+          <!-- search: semântica parecida, mas serve para pesquisa -->
+        </p>
+        <p>
+          <label for="arquivo">Foto do RG:</label>
+          <!-- file: "escolher arquivo" -->
+          <input type="file" id="arquivo" name="arquivo" accept=".png,.jpg">
+          <!-- accept: validação básica para extensões de arquivo -->
+           <!-- multiple: escolher múltiplos arquivos para upload -->
+        </p>
+        <p>
+          <label for="cor">Cor preferida:</label>
+          <input type="color" id="cor" name="cor" value="#000000">
+        </p>
+
+        <p>
+          <label for="senha">Senha:</label>
+          <!-- password: tipo para senhas (caracteres ocultos) -->
+          <input type="password" id="senha" name="senha" placeholder="Digite seu PIN">
+        </p>
+        <p>
+          <label for="barra">Grau de satisfação:</label>
+          <!-- range: "volume", barra arrastável  -->
+          <input type="range" id="barra" name="barra" min="0" max="100" step="10" list="tickmarks">
+          <!-- definir marcas do range: -->
+          <datalist id="tickmarks">
+            <option value="0" label="0%"></option>
+            <option value="10"></option>
+            <option value="20"></option>
+            <option value="30"></option>
+            <option value="40"></option>
+            <option value="50" label="50%"></option>
+            <option value="60"></option>
+            <option value="70"></option>
+            <option value="80"></option>
+            <option value="90"></option>
+            <option value="100" label="100%"></option>
+          </datalist>
+        </p>
+        <p>
+          <!-- botão reset para apagar conteúdo do formulário -->
+          <button type="reset">Reset</button>
+          <!-- botão submit para enviar -->
+          <button type="submit">Enviar</button>
+        </p>
+        <p>
+          <label for="select">Selecione alguma opção:</label>
+          <!-- select: tag para seleção de opções com caixa -->
+          <select id="select" name="select">
+            <!-- optgroup: tag para criar grupos de opções -->
+            <optgroup label="Grupo 1">
+              <!-- selected: seleciona previamente -->
+              <option value="1" label="Opção 1" selected></option>
+              <!-- disabled: impossibilita a seleção -->
+              <option value="2" label="Opção 2" disabled></option>
+              <option value="3" label="Opção 3"></option>
+              <option value="4" label="Opção 4"></option>
+            </optgroup>
+            <optgroup label="Grupo 2">
+              <option value="5" label="Opção 1" selected></option>
+              <option value="6" label="Opção 2" disabled></option>
+              <option value="7" label="Opção 3"></option>
+              <option value="8" label="Opção 4"></option>
+            </optgroup>
+          </select>
+        </p>
+        <p>
+          <label for="textarea">Box de texto:</label>
+          <!-- textarea: caixa de texto -->
+          <textarea id="textarea" name="textarea" rows="8" cols="50">Texto predefinido no box</textarea>
+        </p>
+      </fieldset>
+    </form>
+  </section>
 </body>
 </html>
