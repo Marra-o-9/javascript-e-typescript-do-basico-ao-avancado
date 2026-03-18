@@ -45,6 +45,10 @@ console.log(nome1, nome2);
 // Hoisting -> Elevação de criação de variáveis para o topo do arquivo
 // JS espera a definição de valor da variável
 
-console.log(sobrenome);
+console.log(sobrenome1);
 
-var sobrenome = "Marra";
+var sobrenome1 = "Marra";
+
+console.log(sobrenome2);
+
+let sobrenome2 = "Barbosa"; // dá erro, não ocorre hoisting com let
